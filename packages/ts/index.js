@@ -1,14 +1,15 @@
+import { allFiles } from 'eslint-config-base';
 import { flatConfigs as importConfigs } from 'eslint-plugin-import';
 import { configs as tsEslintConfigs } from 'typescript-eslint';
-import getFlatConfigs, { allFiles } from './getFlatConfigs.js';
+import tsRules from './rules/rules.js';
 
-export default function getTsFlatConfigs(
-  { isNodeEsm = false, tsRootDir = '', rules } = {},
-  ...rest
-) {
-  const files = [`${tsRootDir}**/*.{ts,tsx,d.ts}`];
-  return getFlatConfigs(
-    isNodeEsm,
+export default function getTsConfigs({
+  tsconfigRootDir = import.meta.dirname,
+  tsRootDir = '',
+  rules = {},
+} = {}) {
+  const files = [`${tsRootDir}**/*.{ts,cts,mts,tsx,d.ts}`];
+  return Object.freeze([
     importConfigs.typescript,
     {
       files: allFiles,
@@ -31,11 +32,10 @@ export default function getTsFlatConfigs(
       languageOptions: {
         parserOptions: {
           project: true,
-          tsconfigRootDir: import.meta.dirname,
+          tsconfigRootDir,
         },
       },
-      rules,
+      rules: { ...tsRules, ...rules },
     },
-    ...rest,
-  );
+  ]);
 }

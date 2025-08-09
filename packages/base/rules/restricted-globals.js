@@ -1,4 +1,4 @@
-export default [
+export default Object.freeze([
   'error',
   {
     name: 'isFinite',
@@ -8,4 +8,4 @@ export default [
     name: 'isNaN',
     message: 'Use Number.isNaN',
   },
-];
+]);

@@ -1,0 +1,30 @@
+{
+  "name": "eslint-config-node",
+  "version": "0.0.1",
+  "description": "eslint-config-node",
+  "type": "module",
+  "main": "index.js",
+  "module": "index.js",
+  "scripts": {
+    "prepublish": "cd .. && pnpm lint-staged"
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saifulislamsojib/eslint-config"
+  },
+  "author": "https://github.com/saifulislamsojib",
+  "license": "MIT",
+  "packageManager": "pnpm@10.11.0",
+  "dependencies": {
+    "globals": "^16.3.0"
+  },
+  "peerDependencies": {
+    "eslint-config-base": "0.0.1",
+    "eslint": ">=9",
+    "prettier": ">=3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

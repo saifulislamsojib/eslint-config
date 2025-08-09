@@ -1,3 +1,4 @@
-import getNodeFlatConfigs from './getNodeFlatConfigs.js';
+import getFlatConfigs from './packages/base/index.js';
+import nodeConfigs from './packages/node/index.js';
 
-export default getNodeFlatConfigs(true);
+export default getFlatConfigs(nodeConfigs(true));

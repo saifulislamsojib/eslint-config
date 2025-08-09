@@ -1,3 +1,5 @@
+import restrictedGlobals from './restricted-globals.js';
+
 export default Object.freeze({
   'no-shadow': 'error',
   'no-use-before-define': 'error',
@@ -26,6 +28,7 @@ export default Object.freeze({
   'no-useless-return': 'error',
   'no-var': 'error',
   'no-caller': 'error',
+  'no-empty-function': 'error',
   'no-else-return': ['error', { allowElseIf: false }],
   'no-eval': 'error',
   'no-extend-native': 'error',
@@ -61,13 +64,6 @@ export default Object.freeze({
       disallowRedundantWrapping: true,
     },
   ],
-  'prefer-arrow-callback': [
-    'error',
-    {
-      allowNamedFunctions: false,
-      allowUnboundThis: true,
-    },
-  ],
   'prefer-destructuring': [
     'error',
     {
@@ -80,8 +76,6 @@ export default Object.freeze({
     },
   ],
   eqeqeq: ['error', 'always', { null: 'ignore' }],
-  curly: ['error', 'multi-line'],
-  'arrow-body-style': ['error', 'as-needed'],
   'default-case': ['error', { commentPattern: '^no default$' }],
   'default-case-last': 'error',
   'default-param-last': 'error',
@@ -89,6 +83,7 @@ export default Object.freeze({
   'dot-notation': 'error',
   'class-methods-use-this': 'error',
   'block-scoped-var': 'error',
+  'no-restricted-globals': restrictedGlobals,
   'no-restricted-properties': [
     'error',
     {
