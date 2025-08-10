@@ -1,8 +1,8 @@
 import { webConfigs } from 'eslint-config-base/web';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
+import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import preferFunctionComponent from 'eslint-plugin-react-prefer-function-component/config';
-import react from 'eslint-plugin-react/configs/recommended.js';
 
 const ERROR = 'error';
 
@@ -13,6 +13,7 @@ export default Object.freeze([
   {
     ...webConfigs,
     settings: {
+      'import-x/extensions': ['.js', '.jsx', '.mjs', '.cjs'],
       react: { version: 'detect' },
     },
     plugins: {

@@ -1,6 +1,6 @@
 import restrictedGlobals from './restricted-globals.js';
 
-export default Object.freeze({
+export default {
   'no-shadow': 'error',
   'no-use-before-define': 'error',
   'no-await-in-loop': 'error',
@@ -14,12 +14,7 @@ export default Object.freeze({
   'no-bitwise': 'error',
   'no-lonely-if': 'error',
   'no-nested-ternary': 'error',
-  'no-restricted-syntax': [
-    'error',
-    'FunctionExpression',
-    'WithStatement',
-    "BinaryExpression[operator='in']",
-  ],
+  'no-restricted-syntax': ['error', 'FunctionExpression', 'WithStatement'],
   'no-unneeded-ternary': ['error', { defaultAssignment: false }],
   'no-useless-computed-key': 'error',
   'no-useless-constructor': 'error',
@@ -58,21 +53,12 @@ export default Object.freeze({
   'prefer-numeric-literals': 'error',
   'prefer-const': ['error', { destructuring: 'all' }],
   'prefer-promise-reject-errors': ['error', { allowEmptyReject: true }],
-  'prefer-regex-literals': [
-    'error',
-    {
-      disallowRedundantWrapping: true,
-    },
-  ],
+  'prefer-regex-literals': ['error', { disallowRedundantWrapping: true }],
   'prefer-destructuring': [
     'error',
     {
-      VariableDeclarator: {
-        object: true,
-      },
-      AssignmentExpression: {
-        array: true,
-      },
+      VariableDeclarator: { object: true },
+      AssignmentExpression: { array: true },
     },
   ],
   eqeqeq: ['error', 'always', { null: 'ignore' }],
@@ -95,4 +81,4 @@ export default Object.freeze({
       message: 'Please use Object.defineProperty instead.',
     },
   ],
-});
+};

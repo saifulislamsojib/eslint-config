@@ -1,11 +1,23 @@
-export default Object.freeze({
-  // strict
+export default {
+  /**
+    off some import rules that no needed for typescript.
+    TypeScript provides the same checks as part of standard type checking
+  */
+  'import-x/named': 'off',
+  'import-x/namespace': 'off',
+  'import-x/default': 'off',
+  'import-x/export': 'off',
+  'import-x/no-named-as-default-member': 'off',
+  // strict rules
   '@typescript-eslint/no-extraneous-class': 'error',
   '@typescript-eslint/no-invalid-void-type': 'error',
   '@typescript-eslint/prefer-literal-enum-member': 'error',
   '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'error',
-  '@typescript-eslint/unified-signatures': ['error', { ignoreOverloadsWithDifferentJSDoc: true }],
-  // strict type checked
+  '@typescript-eslint/unified-signatures': [
+    'error',
+    { ignoreOverloadsWithDifferentJSDoc: true },
+  ],
+  // strict type checked rules
   '@typescript-eslint/no-meaningless-void-operator': 'error',
   '@typescript-eslint/no-deprecated': 'error',
   '@typescript-eslint/no-misused-spread': 'error',
@@ -31,7 +43,7 @@ export default Object.freeze({
       allowRegExp: false,
     },
   ],
-  // stylistic
+  // stylistic rules
   '@typescript-eslint/array-type': 'error',
   '@typescript-eslint/adjacent-overload-signatures': 'error',
   '@typescript-eslint/consistent-generic-constructors': 'error',
@@ -45,7 +57,7 @@ export default Object.freeze({
   '@typescript-eslint/prefer-for-of': 'error',
   '@typescript-eslint/prefer-function-type': 'error',
   '@typescript-eslint/class-literal-property-style': 'error',
-  // stylistic type checked
+  // stylistic type checked rules
   'dot-notation': 'off',
   '@typescript-eslint/dot-notation': 'error',
   '@typescript-eslint/non-nullable-type-assertion-style': 'error',
@@ -54,7 +66,7 @@ export default Object.freeze({
   '@typescript-eslint/prefer-optional-chain': 'error',
   '@typescript-eslint/prefer-regexp-exec': 'error',
   '@typescript-eslint/prefer-string-starts-ends-with': 'error',
-  // other
+  // other rules
   '@typescript-eslint/consistent-type-exports': [
     'error',
     { fixMixedExportsWithInlineTypeSpecifier: true },
@@ -77,4 +89,4 @@ export default Object.freeze({
   '@typescript-eslint/prefer-enum-initializers': 'error',
   'class-methods-use-this': 'off',
   '@typescript-eslint/class-methods-use-this': 'error',
-});
+};

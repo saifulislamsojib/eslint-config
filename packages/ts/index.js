@@ -1,10 +1,11 @@
 import { allFiles } from 'eslint-config-base';
-import { flatConfigs as importConfigs } from 'eslint-plugin-import';
+import importConfigs from 'eslint-config-base/import-plugin';
+import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript';
 import { configs as tsEslintConfigs } from 'typescript-eslint';
-import tsRules from './rules/rules.js';
+import tsRules from './rules/index.js';
 
 export default function getTsConfigs({
-  tsconfigRootDir = import.meta.dirname,
+  tsconfigRootDir,
   tsRootDir = '',
   rules = {},
 } = {}) {
@@ -14,13 +15,12 @@ export default function getTsConfigs({
     {
       files: allFiles,
       settings: {
-        'import/resolver': {
-          typescript: {
+        'import-x/resolver-next': [
+          createTypeScriptImportResolver({
             alwaysTryTypes: true,
             project: './tsconfig.json',
-            extensions: ['.ts', '.cts', '.mts', '.tsx'],
-          },
-        },
+          }),
+        ],
       },
     },
     ...tsEslintConfigs.recommendedTypeChecked.map((config) => ({
@@ -31,7 +31,7 @@ export default function getTsConfigs({
       files,
       languageOptions: {
         parserOptions: {
-          project: true,
+          projectService: true,
           tsconfigRootDir,
         },
       },

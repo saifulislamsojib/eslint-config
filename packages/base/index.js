@@ -1,13 +1,10 @@
 import js from '@eslint/js';
-import { flatConfigs as importConfigs } from 'eslint-plugin-import';
+import { flatConfigs as importConfigs } from 'eslint-plugin-import-x';
 import prettierRecommended from 'eslint-plugin-prettier/recommended';
 import base from './rules/base.js';
-import imports from './rules/import.js';
+import imports, { devDepsImportAllowedFiles } from './rules/import.js';
 
-export { default as testFiles } from './constants/testFiles.js';
-export { default as restrictedGlobals } from './rules/restricted-globals.js';
-
-export const allFiles = ['**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx,d.ts}'];
+const allFiles = ['**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx,d.ts}'];
 
 export default function getFlatConfigs(...rest) {
   return Object.freeze([
@@ -16,14 +13,12 @@ export default function getFlatConfigs(...rest) {
     importConfigs.recommended,
     {
       files: allFiles,
+      settings: {
+        'import-x/extensions': ['.js', '.mjs', '.cjs'],
+      },
       languageOptions: {
         ecmaVersion: 2023,
         sourceType: 'module',
-      },
-      settings: {
-        'import/resolver': {
-          typescript: { alwaysTryTypes: true },
-        },
       },
       rules: { ...base, ...imports },
     },
@@ -31,3 +26,7 @@ export default function getFlatConfigs(...rest) {
     prettierRecommended,
   ]);
 }
+
+export { default as testFiles } from './constants/testFiles.js';
+export { default as restrictedGlobals } from './rules/restricted-globals.js';
+export { allFiles, devDepsImportAllowedFiles, importConfigs };

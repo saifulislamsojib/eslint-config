@@ -1,4 +1,4 @@
-export default Object.freeze([
+export default [
   'addEventListener',
   'blur',
   'close',
@@ -57,4 +57,4 @@ export default Object.freeze([
   'stop',
   'toolbar',
   'top',
-]);
+];

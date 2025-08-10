@@ -23,7 +23,8 @@
   "peerDependencies": {
     "eslint-config-base": "0.0.1",
     "eslint": ">=9",
-    "prettier": ">=3"
+    "prettier": ">=3",
+    "typescript": ">=5.6"
   },
   "engines": {
     "node": ">=20"

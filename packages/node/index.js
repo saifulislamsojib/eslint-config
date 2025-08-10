@@ -13,8 +13,8 @@ export default function getNodeConfig(isNodeEsm = false) {
     globalsObj.module = 'off';
     globalsObj.require = 'off';
     rules['no-restricted-globals'] = esmRestGlobals;
-    rules['import/no-commonjs'] = 'error';
-    rules['import/extensions'] = ['error', 'ignorePackages'];
+    rules['import-x/no-commonjs'] = 'error';
+    rules['import-x/extensions'] = ['error', 'ignorePackages'];
   }
   return Object.freeze({
     files: allFiles,

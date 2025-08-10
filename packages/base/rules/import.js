@@ -1,22 +1,37 @@
 import testFiles from '../constants/testFiles.js';
 
-export default Object.freeze({
-  'import/no-self-import': 'error',
-  'import/no-named-default': 'error',
-  'import/no-absolute-path': 'error',
-  'import/prefer-default-export': 'error',
-  'import/newline-after-import': 'error',
-  'import/no-dynamic-require': 'error',
-  'import/no-import-module-exports': 'error',
-  'import/no-cycle': ['error', { maxDepth: '∞' }],
-  'import/no-useless-path-segments': 'error',
-  'import/order': ['error', { groups: [['builtin', 'external', 'internal']] }],
-  'import/no-duplicates': 'error',
-  'import/first': 'error',
-  'import/no-mutable-exports': 'error',
-  'import/no-amd': 'error',
-  'import/no-deprecated': 'warn',
-  'import/extensions': [
+export const devDepsImportAllowedFiles = [
+  '{vite,vitest,eslint,next,postcss,jest,rollup}.config.{js,ts,mjs,mts,cjs}',
+  ...testFiles,
+];
+
+export default {
+  'import-x/no-duplicates': 'error',
+  'import-x/no-named-as-default': 'error',
+  'import-x/no-named-as-default-member': 'error',
+  'import-x/unambiguous': 'warn',
+  'import-x/exports-last': 'error',
+  'import-x/no-empty-named-blocks': 'error',
+  'import-x/no-relative-packages': 'error',
+  'import-x/no-self-import': 'error',
+  'import-x/no-named-default': 'error',
+  'import-x/no-absolute-path': 'error',
+  'import-x/prefer-default-export': 'error',
+  'import-x/newline-after-import': 'error',
+  'import-x/no-dynamic-require': 'error',
+  'import-x/no-import-module-exports': 'error',
+  'import-x/no-cycle': 'error',
+  'import-x/no-useless-path-segments': 'error',
+  'import-x/order': [
+    'error',
+    { groups: [['builtin', 'external', 'internal']] },
+  ],
+  'import-x/first': 'error',
+  'import-x/no-mutable-exports': 'error',
+  'import-x/no-amd': 'error',
+  'import-x/no-deprecated': 'warn',
+  'import-x/no-unassigned-import': ['error', { allow: ['**/*.css'] }],
+  'import-x/extensions': [
     'error',
     'ignorePackages',
     {
@@ -26,13 +41,18 @@ export default Object.freeze({
       tsx: 'never',
     },
   ],
-  'import/no-extraneous-dependencies': [
+  'import-x/no-extraneous-dependencies': [
+    'error',
+    { devDependencies: devDepsImportAllowedFiles },
+  ],
+  'import-x/no-anonymous-default-export': [
     'error',
     {
-      devDependencies: [
-        '{vite,vitest,eslint,next,postcss,jest,rollup}.config.{js,ts,mjs,mts,cjs}',
-        ...testFiles,
-      ],
+      allowArray: true,
+      allowArrowFunction: true,
+      allowCallExpression: true,
+      allowNew: true,
+      allowObject: true,
     },
   ],
-});
+};

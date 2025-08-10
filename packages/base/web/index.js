@@ -13,5 +13,3 @@ export const webConfigs = Object.freeze({
 export default function getWebFlatConfigs(...rest) {
   return getFlatConfigs(webConfigs, ...rest);
 }
-
-export { webRules };
