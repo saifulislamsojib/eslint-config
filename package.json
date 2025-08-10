@@ -1,7 +1,7 @@
 {
-  "name": "eslint",
-  "version": "0.0.1",
-  "description": "eslint",
+  "name": "stack-lint",
+  "version": "0.0.2",
+  "description": "stack-lint",
   "type": "module",
   "scripts": {
     "lint": "eslint --max-warnings 0 --fix",
@@ -19,6 +19,8 @@
   "packageManager": "pnpm@10.11.0",
   "devDependencies": {
     "@eslint/js": "^9.33.0",
+    "@stack-lint/base": "^0.0.1",
+    "@stack-lint/node": "^0.0.2",
     "eslint": "^9.33.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-import-resolver-typescript": "^4.4.4",

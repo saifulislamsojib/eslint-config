@@ -1,4 +1,4 @@
-import { restrictedGlobals } from '../../base/index.js';
+import { restrictedGlobals } from '@stack-lint/base';
 
 export default restrictedGlobals.concat([
   {

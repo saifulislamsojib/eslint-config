@@ -1,18 +1,32 @@
 {
-  "name": "eslint-config-base",
-  "version": "0.0.1",
-  "description": "eslint-config-base",
+  "name": "@stack-lint/base",
+  "version": "0.0.2",
+  "description": "@stack-lint/base",
   "type": "module",
   "main": "index.js",
   "module": "index.js",
   "exports": {
-    ".": "./index.js",
-    "./web": "./web/index.js"
+    ".": {
+      "import": "./index.js",
+      "require": "./index.js",
+      "types": "./index.d.ts"
+    },
+    "./web": {
+      "import": "./web/index.js",
+      "require": "./web/index.js",
+      "types": "./web/index.d.ts"
+    }
   },
   "scripts": {
-    "prepublish": "cd .. && pnpm lint-staged"
+    "prepublish": "cd .. && pnpm lint-staged",
+    "generate": "npx -p typescript tsc **/*.js --declaration --allowJs --emitDeclarationOnly --outDir ."
   },
-  "keywords": [],
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "stack-lint",
+    "base-eslint"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/saifulislamsojib/eslint-config"

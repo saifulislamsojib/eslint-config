@@ -6,7 +6,11 @@ import imports, { devDepsImportAllowedFiles } from './rules/import.js';
 
 const allFiles = ['**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx,d.ts}'];
 
-export default function getFlatConfigs(...rest) {
+/**
+ * @param configs  {Linter.Config[]}
+ * @returns {Linter.Config[]}
+ */
+export default function getFlatConfigs(...configs) {
   return Object.freeze([
     { ignores: ['node_modules', 'dist', 'out', 'build', '.next'] },
     js.configs.recommended,
@@ -22,7 +26,7 @@ export default function getFlatConfigs(...rest) {
       },
       rules: { ...base, ...imports },
     },
-    ...rest,
+    ...configs,
     prettierRecommended,
   ]);
 }

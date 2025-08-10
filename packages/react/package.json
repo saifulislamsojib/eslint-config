@@ -24,7 +24,7 @@
     "eslint-plugin-react-prefer-function-component": "^4.0.1"
   },
   "peerDependencies": {
-    "eslint-config-base": "0.0.1",
+    "@stack-lint/base": "0.0.2",
     "eslint": ">=9",
     "prettier": ">=3"
   },

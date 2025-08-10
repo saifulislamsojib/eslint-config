@@ -1,8 +1,8 @@
-import getFlatConfigs from './packages/base/index.js';
-import getNodeConfig from './packages/node/index.js';
+import getFlatConfigs from '@stack-lint/base';
+import getNodeConfig from '@stack-lint/node';
 
-export default getFlatConfigs(getNodeConfig(true), {
-  rules: {
-    'import-x/no-relative-packages': 'off',
-  },
-});
+export default getFlatConfigs(
+  getNodeConfig(true),
+  { ignores: ['**/*.d.ts'] },
+  { rules: { 'import-x/no-relative-packages': 'off' } },
+);

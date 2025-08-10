@@ -1,5 +1,4 @@
-import { allFiles } from 'eslint-config-base';
-import importConfigs from 'eslint-config-base/import-plugin';
+import { allFiles, importConfigs } from '@stack-lint/base';
 import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript';
 import { configs as tsEslintConfigs } from 'typescript-eslint';
 import tsRules from './rules/index.js';

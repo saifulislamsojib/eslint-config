@@ -1,4 +1,4 @@
-import { webConfigs } from 'eslint-config-base/web';
+import { webConfigs } from '@stack-lint/base/web';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
