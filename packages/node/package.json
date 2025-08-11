@@ -1,26 +1,26 @@
 {
   "name": "@stack-lint/node",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "@stack-lint/node",
   "type": "module",
   "main": "index.js",
   "module": "index.js",
+  "types": "index.d.ts",
   "exports": {
     ".": {
-      "import": "./index.js",
-      "require": "./index.js",
+      "default": "./index.js",
       "types": "./index.d.ts"
     }
   },
   "scripts": {
-    "prepublish": "cd .. && pnpm lint-staged",
-    "generate": "npx -p typescript tsc index.js --declaration --allowJs --emitDeclarationOnly --outDir ."
+    "prepublish": "cd .. && pnpm lint-staged"
   },
   "keywords": [
     "eslint",
     "eslint-config",
     "stack-lint",
-    "node-eslint"
+    "node-eslint",
+    "@stack-lint/node"
   ],
   "repository": {
     "type": "git",
@@ -33,7 +33,7 @@
     "globals": "^16.3.0"
   },
   "peerDependencies": {
-    "@stack-lint/base": "0.0.2",
+    "@stack-lint/base": "0.0.3",
     "eslint": ">=9",
     "prettier": ">=3"
   },

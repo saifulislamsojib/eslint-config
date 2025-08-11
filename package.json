@@ -1,11 +1,11 @@
 {
   "name": "stack-lint",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "stack-lint",
   "type": "module",
   "scripts": {
     "lint": "eslint --max-warnings 0 --fix",
-    "format": "prettier --log-level warn --write \"./**/*.{js,mjs,cjs,ts,d.ts,mts,json,yaml,yml,html}\"",
+    "format": "prettier --log-level warn --write \"./**/*.{js,mjs,cjs,ts,json,yaml,yml,html}\"",
     "lint-staged": "lint-staged",
     "prepare": "husky || true"
   },
@@ -19,8 +19,11 @@
   "packageManager": "pnpm@10.11.0",
   "devDependencies": {
     "@eslint/js": "^9.33.0",
-    "@stack-lint/base": "^0.0.1",
-    "@stack-lint/node": "^0.0.2",
+    "@stack-lint/base": "^0.0.3",
+    "@stack-lint/node": "^0.0.3",
+    "@stack-lint/react": "^0.0.3",
+    "@typescript-eslint/eslint-plugin": "^8.39.0",
+    "@typescript-eslint/parser": "^8.39.0",
     "eslint": "^9.33.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-import-resolver-typescript": "^4.4.4",
@@ -34,14 +37,13 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.1.5",
     "prettier": "^3.6.2",
-    "typescript": "^5.9.2",
-    "typescript-eslint": "^8.39.0"
+    "typescript": "^5.9.2"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "lint-staged": {
-    "*.{js,mjs,cjs,ts,d.ts,mts}": "eslint --max-warnings 0 --fix",
-    "*.{js,mjs,cjs,ts,d.ts,mts,json,yaml,yml,html}": "prettier --log-level warn --write"
+    "*.{js,mjs,cjs,ts}": "eslint --max-warnings 0 --fix --no-warn-ignored",
+    "*.{js,mjs,cjs,ts,json,yaml,yml,html}": "prettier --log-level warn --write"
   }
 }

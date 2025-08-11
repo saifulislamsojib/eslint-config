@@ -14,7 +14,7 @@ export default {
   'no-bitwise': 'error',
   'no-lonely-if': 'error',
   'no-nested-ternary': 'error',
-  'no-restricted-syntax': ['error', 'FunctionExpression', 'WithStatement'],
+  'no-restricted-syntax': ['error', 'WithStatement'],
   'no-unneeded-ternary': ['error', { defaultAssignment: false }],
   'no-useless-computed-key': 'error',
   'no-useless-constructor': 'error',
@@ -51,7 +51,7 @@ export default {
   'prefer-exponentiation-operator': 'error',
   'prefer-object-has-own': 'error',
   'prefer-numeric-literals': 'error',
-  'prefer-const': ['error', { destructuring: 'all' }],
+  'prefer-const': 'error',
   'prefer-promise-reject-errors': ['error', { allowEmptyReject: true }],
   'prefer-regex-literals': ['error', { disallowRedundantWrapping: true }],
   'prefer-destructuring': [
@@ -69,6 +69,11 @@ export default {
   'dot-notation': 'error',
   'class-methods-use-this': 'error',
   'block-scoped-var': 'error',
+  'func-style': [
+    'error',
+    'declaration',
+    { allowArrowFunctions: true, allowTypeAnnotation: true },
+  ],
   'no-restricted-globals': restrictedGlobals,
   'no-restricted-properties': [
     'error',

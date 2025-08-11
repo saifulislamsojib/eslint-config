@@ -1,7 +1,7 @@
 {
-  "name": "@stack-lint/react",
+  "name": "@stack-lint/typescript",
   "version": "0.0.3",
-  "description": "@stack-lint/react",
+  "description": "@stack-lint/typescript",
   "type": "module",
   "main": "index.js",
   "module": "index.js",
@@ -10,22 +10,19 @@
     ".": {
       "default": "./index.js",
       "types": "./index.d.ts"
-    },
-    "./compiler": {
-      "default": "./reactCompilerConfig.js",
-      "types": "./reactCompilerConfig.d.ts"
     }
   },
   "scripts": {
-    "prepublish": "cd .. && pnpm lint-staged"
+    "prepublish": "cd .. && pnpm lint-staged",
+    "generate": "npx -p typescript tsc index.js --declaration --allowJs --emitDeclarationOnly --outDir ."
   },
   "keywords": [
     "eslint",
     "eslint-config",
     "stack-lint",
-    "react-eslint",
-    "stack-lint-react",
-    "@stack-lint/react"
+    "typescript-eslint",
+    "stack-lint-typescript",
+    "@stack-lint/typescript"
   ],
   "repository": {
     "type": "git",
@@ -35,16 +32,15 @@
   "license": "MIT",
   "packageManager": "pnpm@10.11.0",
   "dependencies": {
-    "globals": "^16.3.0",
-    "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-prefer-function-component": "^4.0.1"
+    "@typescript-eslint/eslint-plugin": "^8.39.0",
+    "@typescript-eslint/parser": "^8.39.0",
+    "eslint-import-resolver-typescript": "^4.4.4"
   },
   "peerDependencies": {
     "@stack-lint/base": "0.0.3",
     "eslint": ">=9",
-    "prettier": ">=3"
+    "prettier": ">=3",
+    "typescript": ">=5.6"
   },
   "engines": {
     "node": ">=20"

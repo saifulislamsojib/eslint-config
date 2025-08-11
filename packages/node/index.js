@@ -2,9 +2,6 @@ import { allFiles } from '@stack-lint/base';
 import globals from 'globals';
 import esmRestGlobals from './rules/esm-rest-globals.js';
 
-/**
- * @returns {Linter.Config}
- */
 export default function getNodeConfig(isNodeEsm = false) {
   const globalsObj = { ...globals.es2023, ...globals.node };
 

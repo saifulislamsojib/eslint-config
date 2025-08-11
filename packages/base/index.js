@@ -6,10 +6,6 @@ import imports, { devDepsImportAllowedFiles } from './rules/import.js';
 
 const allFiles = ['**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx,d.ts}'];
 
-/**
- * @param configs  {Linter.Config[]}
- * @returns {Linter.Config[]}
- */
 export default function getFlatConfigs(...configs) {
   return Object.freeze([
     { ignores: ['node_modules', 'dist', 'out', 'build', '.next'] },
