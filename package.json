@@ -19,9 +19,9 @@
   "packageManager": "pnpm@10.11.0",
   "devDependencies": {
     "@eslint/js": "^9.33.0",
-    "@stack-lint/base": "^0.0.3",
-    "@stack-lint/node": "^0.0.3",
-    "@stack-lint/react": "^0.0.3",
+    "@stack-lint/base": "^0.0.4",
+    "@stack-lint/node": "^0.0.4",
+    "@stack-lint/react": "^0.0.4",
     "@typescript-eslint/eslint-plugin": "^8.39.0",
     "@typescript-eslint/parser": "^8.39.0",
     "eslint": "^9.33.0",
