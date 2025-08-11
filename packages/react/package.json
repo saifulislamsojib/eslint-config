@@ -1,6 +1,6 @@
 {
   "name": "@stack-lint/react",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "@stack-lint/react",
   "type": "module",
   "main": "index.js",
@@ -42,7 +42,7 @@
     "eslint-plugin-react-prefer-function-component": "^4.0.1"
   },
   "peerDependencies": {
-    "@stack-lint/base": "0.0.3",
+    "@stack-lint/base": ">=0.0.5",
     "eslint": ">=9",
     "prettier": ">=3"
   },

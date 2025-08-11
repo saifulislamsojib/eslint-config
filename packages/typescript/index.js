@@ -1,6 +1,6 @@
 import { importConfigs } from '@stack-lint/base';
 import tsEslint from '@typescript-eslint/eslint-plugin/use-at-your-own-risk/raw-plugin';
-import tsRules from './rules/index.js';
+import tsRules, { dtsOnlyRules } from './rules/index.js';
 
 export default function getTsConfigs({
   tsconfigRootDir,
@@ -23,6 +23,10 @@ export default function getTsConfigs({
         },
       },
       rules: { ...tsRules, ...rules },
+    },
+    {
+      files: [`${tsRootDir}**/*.d.ts`],
+      rules: dtsOnlyRules,
     },
   ]);
 }

@@ -1,6 +1,6 @@
 {
   "name": "@stack-lint/node",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "@stack-lint/node",
   "type": "module",
   "main": "index.js",
@@ -33,7 +33,7 @@
     "globals": "^16.3.0"
   },
   "peerDependencies": {
-    "@stack-lint/base": "0.0.3",
+    "@stack-lint/base": ">=0.0.5",
     "eslint": ">=9",
     "prettier": ">=3"
   },

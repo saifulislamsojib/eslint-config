@@ -91,3 +91,8 @@ export default {
   'class-methods-use-this': 'off',
   '@typescript-eslint/class-methods-use-this': 'error',
 };
+
+export const dtsOnlyRules = {
+  '@typescript-eslint/consistent-type-definitions': 'off',
+  '@typescript-eslint/consistent-indexed-object-style': 'off',
+};
