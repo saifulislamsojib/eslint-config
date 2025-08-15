@@ -50,7 +50,6 @@ export default {
   '@typescript-eslint/consistent-generic-constructors': 'error',
   '@typescript-eslint/consistent-indexed-object-style': 'error',
   '@typescript-eslint/consistent-type-assertions': 'error',
-  '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
   '@typescript-eslint/no-confusing-non-null-assertion': 'error',
   'no-empty-function': 'off',
   '@typescript-eslint/no-empty-function': 'error',

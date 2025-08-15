@@ -6,6 +6,7 @@ export default function getTsConfigs({
   tsconfigRootDir,
   tsRootDir = '',
   rules = {},
+  typeDefinition = 'type',
 } = {}) {
   const files = [`${tsRootDir}**/*.{ts,cts,mts,tsx,d.ts}`];
   return Object.freeze([
@@ -22,7 +23,14 @@ export default function getTsConfigs({
           tsconfigRootDir,
         },
       },
-      rules: { ...tsRules, ...rules },
+      rules: {
+        ...tsRules,
+        '@typescript-eslint/consistent-type-definitions': [
+          'error',
+          typeDefinition,
+        ],
+        ...rules,
+      },
     },
     {
       files: [`${tsRootDir}**/*.d.ts`],

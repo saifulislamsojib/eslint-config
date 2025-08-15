@@ -13,7 +13,6 @@ export default Object.freeze([
   {
     ...webConfigs,
     settings: {
-      'import-x/extensions': ['.js', '.jsx', '.mjs', '.cjs'],
       react: { version: 'detect' },
     },
     plugins: {

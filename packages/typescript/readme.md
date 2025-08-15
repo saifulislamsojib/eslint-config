@@ -36,6 +36,7 @@ export default getFlatConfigs(
   ...getTsConfigs({
     tsconfigRootDir: import.meta.dirname,
     // tsRootDir: 'src/' your tsconfigs files rootDir, if * then no need the field
+    // typeDefinition: 'interface' if you prefer interface for type definition. otherwise if prefer type no need the field
   }),
 );
 ```

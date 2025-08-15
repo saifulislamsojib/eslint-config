@@ -1,3 +1,5 @@
+// @ts-check
+
 import getFlatConfigs from '@stack-lint/base';
 // import reactConfigs from '@stack-lint/react';
 import getNodeConfig from '@stack-lint/node';

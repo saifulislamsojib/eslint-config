@@ -14,7 +14,9 @@ export default function getNodeConfig(isNodeEsm = false) {
     globalsObj.require = 'off';
     rules['no-restricted-globals'] = esmRestGlobals;
     rules['import-x/no-commonjs'] = 'error';
-    rules['import-x/extensions'] = ['error', 'ignorePackages'];
+    if (isNodeEsm.extension !== true) {
+      rules['import-x/extensions'] = ['error', 'ignorePackages'];
+    }
   }
   return Object.freeze({
     files: allFiles,

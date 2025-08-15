@@ -16,7 +16,6 @@ export default {
   'import-x/no-self-import': 'error',
   'import-x/no-named-default': 'error',
   'import-x/no-absolute-path': 'error',
-  'import-x/prefer-default-export': 'error',
   'import-x/newline-after-import': 'error',
   'import-x/no-dynamic-require': 'error',
   'import-x/no-import-module-exports': 'error',

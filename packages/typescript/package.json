@@ -1,7 +1,7 @@
 {
   "name": "@stack-lint/typescript",
-  "version": "0.0.5",
-  "description": "@stack-lint/typescript",
+  "version": "0.0.6",
+  "description": "stack lint eslint configs for typescript",
   "type": "module",
   "main": "index.js",
   "module": "index.js",
@@ -11,10 +11,6 @@
       "default": "./index.js",
       "types": "./index.d.ts"
     }
-  },
-  "scripts": {
-    "prepublish": "cd .. && pnpm lint-staged",
-    "generate": "npx -p typescript tsc index.js --declaration --allowJs --emitDeclarationOnly --outDir ."
   },
   "keywords": [
     "eslint",

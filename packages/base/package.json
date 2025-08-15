@@ -1,7 +1,7 @@
 {
   "name": "@stack-lint/base",
-  "version": "0.0.5",
-  "description": "@stack-lint/base",
+  "version": "0.0.6",
+  "description": "stack lint eslint configs",
   "type": "module",
   "main": "index.js",
   "module": "index.js",
@@ -15,9 +15,6 @@
       "default": "./web/index.js",
       "types": "./web/index.d.ts"
     }
-  },
-  "scripts": {
-    "prepublish": "cd .. && pnpm lint-staged"
   },
   "keywords": [
     "eslint",
