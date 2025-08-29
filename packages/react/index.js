@@ -49,7 +49,7 @@ export default Object.freeze([
         ERROR,
         {
           namedComponents: ['function-declaration', 'arrow-function'],
-          unnamedComponents: ['function-declaration', 'arrow-function'],
+          unnamedComponents: ['function-expression', 'arrow-function'],
         },
       ],
       'react/jsx-pascal-case': [ERROR, { allowNamespace: true }],

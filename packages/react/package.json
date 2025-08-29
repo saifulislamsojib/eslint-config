@@ -1,6 +1,6 @@
 {
   "name": "@stack-lint/react",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "stack lint eslint configs for react",
   "type": "module",
   "main": "index.js",
