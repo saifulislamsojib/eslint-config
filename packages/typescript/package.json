@@ -1,6 +1,6 @@
 {
   "name": "@stack-lint/typescript",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "stack lint eslint configs for typescript",
   "type": "module",
   "main": "index.js",
@@ -28,12 +28,12 @@
   "license": "MIT",
   "packageManager": "pnpm@10.11.0",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^8.39.0",
-    "@typescript-eslint/parser": "^8.39.0",
+    "@typescript-eslint/eslint-plugin": "^8.41.0",
+    "@typescript-eslint/parser": "^8.41.0",
     "eslint-import-resolver-typescript": "^4.4.4"
   },
   "peerDependencies": {
-    "@stack-lint/base": ">=0.0.5",
+    "@stack-lint/base": ">=0.0.7",
     "eslint": ">=9",
     "prettier": ">=3",
     "typescript": ">=5.6"

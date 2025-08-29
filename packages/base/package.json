@@ -1,6 +1,6 @@
 {
   "name": "@stack-lint/base",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "stack lint eslint configs",
   "type": "module",
   "main": "index.js",
@@ -31,7 +31,7 @@
   "license": "MIT",
   "packageManager": "pnpm@10.11.0",
   "dependencies": {
-    "@eslint/js": "^9.33.0",
+    "@eslint/js": "^9.34.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import-x": "^4.16.1",
     "eslint-plugin-prettier": "^5.5.4"

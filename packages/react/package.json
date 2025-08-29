@@ -1,6 +1,6 @@
 {
   "name": "@stack-lint/react",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "stack lint eslint configs for react",
   "type": "module",
   "main": "index.js",
@@ -14,6 +14,10 @@
     "./compiler": {
       "default": "./reactCompilerConfig.js",
       "types": "./reactCompilerConfig.d.ts"
+    },
+    "./next": {
+      "default": "./next.js",
+      "types": "./next.d.ts"
     }
   },
   "keywords": [
@@ -39,9 +43,16 @@
     "eslint-plugin-react-prefer-function-component": "^4.0.1"
   },
   "peerDependencies": {
-    "@stack-lint/base": ">=0.0.5",
+    "@stack-lint/base": ">=0.0.7",
     "eslint": ">=9",
-    "prettier": ">=3"
+    "prettier": ">=3",
+    "react": ">=19",
+    "@next/eslint-plugin-next": ">=15.1"
+  },
+  "peerDependenciesMeta": {
+    "@next/eslint-plugin-next": {
+      "optional": true
+    }
   },
   "engines": {
     "node": ">=20"

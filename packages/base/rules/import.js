@@ -1,8 +1,14 @@
 import testFiles from '../constants/testFiles.js';
 
 export const devDepsImportAllowedFiles = [
-  '{vite,vitest,eslint,next,postcss,jest,rollup}.config.{js,ts,mjs,mts,cjs}',
+  '{vite,vitest,eslint,next,postcss,jest,rollup,rsbuild}.config.{js,ts,mjs,mts,cjs}',
   ...testFiles,
+];
+
+export const unassignedImportFiles = [
+  '**/*.css',
+  '@testing-library/jest-dom',
+  '@testing-library/jest-dom/vitest',
 ];
 
 export default {
@@ -10,7 +16,6 @@ export default {
   'import-x/no-named-as-default': 'error',
   'import-x/no-named-as-default-member': 'error',
   'import-x/unambiguous': 'warn',
-  'import-x/exports-last': 'error',
   'import-x/no-empty-named-blocks': 'error',
   'import-x/no-relative-packages': 'error',
   'import-x/no-self-import': 'error',
@@ -29,7 +34,7 @@ export default {
   'import-x/no-mutable-exports': 'error',
   'import-x/no-amd': 'error',
   'import-x/no-deprecated': 'warn',
-  'import-x/no-unassigned-import': ['error', { allow: ['**/*.css'] }],
+  'import-x/no-unassigned-import': ['error', { allow: unassignedImportFiles }],
   'import-x/extensions': [
     'error',
     'ignorePackages',

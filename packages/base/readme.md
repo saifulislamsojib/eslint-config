@@ -65,6 +65,17 @@ import reactConfigs from '@stack-lint/react';
 export default getFlatConfigs(...reactConfigs);
 ```
 
+### With Next Js
+
+**eslint.config.js**:
+
+```js
+import getFlatConfigs from '@stack-lint/base';
+import nextConfigs from '@stack-lint/react/next';
+
+export default getFlatConfigs(...nextConfigs);
+```
+
 ---
 
 ### 4️⃣ Base + Node

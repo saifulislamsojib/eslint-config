@@ -22,7 +22,9 @@ export default Object.freeze([
       ...webConfigs.rules,
       ...react.configs['jsx-runtime'].rules,
       ...jsxA11y.flatConfigs.recommended.rules,
+      'jsx-a11y/alt-text': [ERROR, { img: ['Image'] }],
       'react-hooks/exhaustive-deps': ERROR,
+      'react/prop-types': 'off',
       'react/checked-requires-onchange-or-readonly': ERROR,
       'react/destructuring-assignment': ERROR,
       'react/forward-ref-uses-ref': ERROR,
@@ -46,8 +48,8 @@ export default Object.freeze([
       'react/function-component-definition': [
         ERROR,
         {
-          namedComponents: ['function-expression', 'arrow-function'],
-          unnamedComponents: ['function-expression', 'arrow-function'],
+          namedComponents: ['function-declaration', 'arrow-function'],
+          unnamedComponents: ['function-declaration', 'arrow-function'],
         },
       ],
       'react/jsx-pascal-case': [ERROR, { allowNamespace: true }],

@@ -27,6 +27,19 @@ export default getFlatConfigs(...reactConfigs);
 
 ---
 
+### 2️⃣ Next Js
+
+**eslint.config.js**:
+
+```js
+import getFlatConfigs from '@stack-lint/base';
+import nextConfigs from '@stack-lint/react/next';
+
+export default getFlatConfigs(...nextConfigs);
+```
+
+---
+
 ## 📖 Explanation
 
 - **ESLint v9 Flat Configs**  
